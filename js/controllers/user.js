@@ -1,18 +1,13 @@
 
-myApp.modules.umControllers.controller('UserController', ["$scope", "$location", "$http", "$routeParams", "appSettings", function ($scope, $location, $http, $routeParams, appSettings) {
+myApp.modules.umControllers.controller('UserController', ["$window", "$scope", "$location", "$http", "$routeParams", "appSettings", "goToPage", function ($window, $scope, $location, $http, $routeParams, appSettings, goToPage) {
     "use strict";
 
-    var action = $routeParams.action;
+    var action = $routeParams.action; // either "edit" or "add"
     $scope.user = {}; // contains all the form information about the user
 
+    // set the right message for the submit button and fetch the user info if action is edit
     if (action === "edit") {
         $scope.submitButtonMessage = "Edit";
-    }
-    else {
-        $scope.submitButtonMessage = "Add";
-    }
-
-    if (action === "edit") {
 
         $http.get(appSettings.firebaseConnection + "users/" + $routeParams.userId + ".json").
             success(function (data) {
@@ -25,8 +20,16 @@ myApp.modules.umControllers.controller('UserController', ["$scope", "$location",
                 alert("Error !!!");
 
             });
+
+    }
+    else {
+        $scope.submitButtonMessage = "Add";
     }
 
+
+    /**
+     * saveUser() - method is triggered by the submit button to send the user data to the server
+     */
     $scope.saveUser = function () {
 
         if (action === "edit") {
@@ -39,7 +42,7 @@ myApp.modules.umControllers.controller('UserController', ["$scope", "$location",
                 }).
                 error(function () {
 
-                    alert("Error !!!");
+                    $window.alert("Error !!!");
 
                 });
 
@@ -54,11 +57,19 @@ myApp.modules.umControllers.controller('UserController', ["$scope", "$location",
                 }).
                 error(function () {
 
-                    alert("Error !!!");
+                    $window.alert("Error !!!");
 
                 });
         }
 
+    };
+
+    /**
+     * goToPage() method is triggered by the "back" button to change the page
+     * @param page
+     */
+    $scope.goToPage = function (page) {
+        goToPage.go(page);
     };
 
 }]);
