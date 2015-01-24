@@ -28,7 +28,6 @@ myApp.modules.umControllers.controller('UsersListController', ["$window", "$scop
     // listen to an event emitted from "userActions" directive
     $scope.$on("userAction:removeUser", function (event, msg) {
 
-        event.stopPropagation();
         delete $scope.usersList[msg.userId];
 
     });

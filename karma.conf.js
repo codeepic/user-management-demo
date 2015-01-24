@@ -22,20 +22,19 @@ module.exports = function(config) {
 
         'js/**/*.js',
 
-        'tests/**/*.spec.js'
-    ],
+        'tests/**/*.spec.js',
 
+        'templates/**/*.html'
+    ],
+    preprocessors: {
+      "templates/**/*.html": "ng-html2js",
+      'js/**/*.js': 'coverage'
+    },
 
     // list of files to exclude
     exclude: [
     ],
 
-
-    // preprocess matching files before serving them to the browser
-    // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
-    preprocessors: {
-        'js/**/*.js': 'coverage'
-    },
 
 
     // test results reporter to use

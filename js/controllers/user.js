@@ -2,7 +2,7 @@
 myApp.modules.umControllers.controller('UserController', ["$window", "$scope", "$location", "$http", "$routeParams", "appSettings", "goToPage", function ($window, $scope, $location, $http, $routeParams, appSettings, goToPage) {
     "use strict";
 
-    var action = $routeParams.action; // either "edit" or "add"
+    var action = $routeParams.action;
     $scope.user = {}; // contains all the form information about the user
 
     // set the right message for the submit button and fetch the user info if action is edit
@@ -25,7 +25,6 @@ myApp.modules.umControllers.controller('UserController', ["$window", "$scope", "
     else {
         $scope.submitButtonMessage = "Add";
     }
-
 
     /**
      * saveUser() - method is triggered by the submit button to send the user data to the server

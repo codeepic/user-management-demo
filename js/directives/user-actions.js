@@ -1,5 +1,5 @@
 
-myApp.modules.umDirectives.directive('userActions', ["$http", "$location", "appSettings", function ($http, $location, appSettings) {
+myApp.modules.umDirectives.directive('userActions', ["$window", "$http", "$location", "appSettings", function ($window, $http, $location, appSettings) {
     'use strict';
 
     return {
@@ -9,8 +9,11 @@ myApp.modules.umDirectives.directive('userActions', ["$http", "$location", "appS
         scope: {
             userId: "="
         },
-        link: function (scope, elem) {
+        link: function (scope) {
 
+            /**
+             * removeUser() - method is triggered by the remove icon and deletes a user
+             */
             scope.removeUser = function () {
 
                 $http.delete(appSettings.firebaseConnection + "users/" + scope.userId + ".json").
@@ -21,12 +24,15 @@ myApp.modules.umDirectives.directive('userActions', ["$http", "$location", "appS
                     }).
                     error(function () {
 
-                        alert("Error !!!");
+                        $window.alert("Error !!!");
 
                     });
 
             };
 
+            /**
+             * editUser() - method is triggered by the edit icon and moves to the user/edit page
+             */
             scope.editUser = function () {
 
                 $location.path(appSettings.serverPath + "user/edit/" + scope.userId);
