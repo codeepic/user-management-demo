@@ -1,0 +1,35 @@
+<div class="users-list-container">
+    <div>
+        <button type="button" class="btn btn-primary" ng-click="goToPage('add-user')">Add user</button>
+    </div>
+    <div class="list-container">
+
+        <table class="table table-bordered table-striped">
+
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Phone</th>
+                <th>Occupation</th>
+                <th></th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr ng-repeat="user in ::usersList">
+                <td>{{$index+1}}</td>
+                <td>{{user.firstName}}</td>
+                <td>{{user.lastName}}</td>
+                <td>{{user.phone}}</td>
+                <td>{{user.occupation}}</td>
+                <td>
+                    Actions
+                </td>
+            </tr>
+            </tbody>
+
+        </table>
+    </div>
+</div>

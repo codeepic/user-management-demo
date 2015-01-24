@@ -1,0 +1,26 @@
+<div class="add-user-container">
+    <div>
+        <button class="btn btn-primary" ng-click="goToPage('add-user')">Back</button>
+    </div>
+    <div class="form-container">
+        <form ng-submit="saveUser()">
+            <div class="form-group">
+                <label for="firstName">First name</label>
+                <input type="text" class="form-control" id="firstName" ng-model="user.firstName" placeholder="Enter first name">
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last name</label>
+                <input type="text" class="form-control" id="lastName" ng-model="user.lastName" placeholder="Enter last name">
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="text" class="form-control" id="phone" ng-model="user.phone" placeholder="Enter phone number">
+            </div>
+            <div class="form-group">
+                <label for="occupation">Occupation</label>
+                <input type="text" class="form-control" id="occupation" ng-model="user.occupation" placeholder="Enter occupation">
+            </div>
+            <button type="submit" class="btn btn-default">Add</button>
+        </form>
+    </div>
+</div>

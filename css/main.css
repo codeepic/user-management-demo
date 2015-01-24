@@ -1,0 +1,33 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+.main-container-table {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+.main-container-tr {
+  display: table-row;
+}
+.main-container-td {
+  display: table-cell;
+  vertical-align: middle;
+}
+.add-user-container {
+  max-width: 300px;
+  margin: auto;
+}
+.add-user-container .form-container {
+  padding-top: 50px;
+}
+.users-list-container {
+  max-width: 500px;
+  margin: auto;
+}
+.users-list-container .list-container {
+  padding-top: 50px;
+}

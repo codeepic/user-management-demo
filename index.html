@@ -1,1 +1,40 @@
-TEST
+<!DOCTYPE html>
+<html ng-app="um">
+    <head>
+        <base href="">
+        <title>User management</title>
+        <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+
+        <script src="bower_components/angular/angular.min.js"></script>
+        <script src="bower_components/angular-route/angular-route.min.js"></script>
+        <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+        <script src="bower_components/firebase/firebase.js"></script>
+
+        <script>
+            // myApp global variable will contain everything related to the project
+            var myApp = {
+                // will contain all the app modules
+                modules: {
+                    umControllers: angular.module("um.controllers", []),
+                    umServices: angular.module("um.services", [])
+                }
+            }
+        </script>
+
+        <script src="js/app.js"></script>
+        <script src="js/controllers/users-list.js"></script>
+        <script src="js/controllers/add-user.js"></script>
+        <script src="js/services/app-settings.js"></script>
+    </head>
+    <body>
+
+        <div class="main-container-table">
+            <div class="main-container-tr">
+                <div class="main-container-td" ng-view></div>
+            </div>
+        </div>
+
+
+    </body>
+</html>

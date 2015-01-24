@@ -1,0 +1,32 @@
+{
+  "name": "user-management-demo",
+  "version": "0.0.0",
+  "homepage": "https://github.com/w3apps/user-management-demo",
+  "authors": [
+    "Adrian-Catalin Neatu"
+  ],
+  "description": "User management demo app",
+  "main": "index.html",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "user",
+    "management"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.3.10",
+    "angular-bootstrap": "~0.12.0",
+    "bootstrap": "~3.3.2",
+    "firebase": "~2.1.1"
+  }
+}
