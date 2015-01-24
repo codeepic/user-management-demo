@@ -17,7 +17,7 @@ myApp.modules.umControllers.controller('UserController', ["$window", "$scope", "
             }).
             error(function () {
 
-                alert("Error !!!");
+                $window.alert("Error !!!");
 
             });
 
