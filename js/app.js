@@ -14,11 +14,18 @@ myApp.modules.um.config(["$routeProvider", "$locationProvider", "appSettings", f
     $locationProvider.html5Mode({
         enabled: true,
         requireBase: false
-    }).hashPrefix('!');
-
-
-    $routeProvider.when(appSettings.serverPath + "user/:action/:userId?", {templateUrl: appSettings.serverPath + "templates/views/user.html", controller: "UserController"});
-
-    $routeProvider.otherwise({templateUrl: appSettings.serverPath + "templates/views/users-list.html", controller: "UsersListController"});
+    });
+    $routeProvider.when(appSettings.serverPath + "user/:action/:userId?",
+        {
+            templateUrl: appSettings.serverPath + "templates/views/user.html",
+            controller: "UserController"
+        }
+    );
+    $routeProvider.otherwise(
+        {
+            templateUrl: appSettings.serverPath + "templates/views/users-list.html",
+            controller: "UsersListController"
+        }
+    );
 
 }]);

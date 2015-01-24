@@ -19,6 +19,11 @@
   "devDependencies": {
     "bower": "~1.3.12",
     "karma": "~0.12.31",
-    "less": "~2.2.0"
+    "less": "~2.2.0",
+    "jasmine-core": "~2.1.3",
+    "karma-jasmine": "~0.3.5",
+    "karma-chrome-launcher": "~0.1.7",
+    "karma-firefox-launcher": "~0.1.4",
+    "karma-coverage": "~0.2.7"
   }
 }
