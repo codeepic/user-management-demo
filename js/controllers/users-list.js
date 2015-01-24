@@ -21,4 +21,8 @@ myApp.modules.umControllers.controller('UsersListController', ["$scope", "$locat
         $location.path(appSettings.serverPath + page);
     };
 
+    $scope.$on("userAction:removeUser", function (event, msg) {
+        delete $scope.usersList[msg.userId];
+    });
+
 }]);

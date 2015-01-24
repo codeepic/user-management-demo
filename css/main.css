@@ -17,11 +17,11 @@ html {
   display: table-cell;
   vertical-align: middle;
 }
-.add-user-container {
+.user-container {
   max-width: 300px;
   margin: auto;
 }
-.add-user-container .form-container {
+.user-container .form-container {
   padding-top: 50px;
 }
 .users-list-container {
@@ -30,4 +30,15 @@ html {
 }
 .users-list-container .list-container {
   padding-top: 50px;
+}
+.user-actions {
+  text-align: center;
+}
+.user-actions .user-actions-button {
+  display: inline-block;
+  cursor: pointer;
+}
+.user-actions .user-actions-button.glyphicon-remove {
+  margin-left: 10px;
+  color: red;
 }

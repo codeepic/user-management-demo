@@ -18,7 +18,7 @@ body, html {
   vertical-align: middle;
 }
 
-.add-user-container {
+.user-container {
   max-width: 300px;
   margin: auto;
 
@@ -33,5 +33,19 @@ body, html {
 
   .list-container {
     padding-top: 50px;
+  }
+}
+
+.user-actions {
+  text-align: center;
+
+  .user-actions-button {
+    display: inline-block;
+    cursor: pointer;
+
+    &.glyphicon-remove {
+      margin-left: 10px;
+      color: red;
+    }
   }
 }

@@ -17,15 +17,17 @@
                 // will contain all the app modules
                 modules: {
                     umControllers: angular.module("um.controllers", []),
-                    umServices: angular.module("um.services", [])
+                    umServices: angular.module("um.services", []),
+                    umDirectives: angular.module("um.directives", [])
                 }
             }
         </script>
 
         <script src="js/app.js"></script>
         <script src="js/controllers/users-list.js"></script>
-        <script src="js/controllers/add-user.js"></script>
+        <script src="js/controllers/user.js"></script>
         <script src="js/services/app-settings.js"></script>
+        <script src="js/directives/user-actions.js"></script>
     </head>
     <body>
 
